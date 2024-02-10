@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital@1&display=swap');
+*{
+  padding: 0;
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+body{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.center{
+  height: 800px;
+  width: 1200px;
+  background-color: #ffffff3c;
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+}
+#title{
+  text-align: center;
+  margin-top: 40px;
+}
+nav{
+  height: 60px;
+  width: 100%;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  top: 100px;
+  z-index: 99;
+}
+nav #logoDiv{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 20px;
+  gap: 10px;
+}
+nav #logoDiv img{
+  width: 40px;
+  border-radius: 50%;
+}
+nav .searchArea{
+  height: 40px;
+  display: flex;
+  background-color: white;
+  box-shadow: 0 0 5px 2px #0000003c;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+  margin: 0 20px;
+}
+
+.searchArea #searchInput{
+  height: 40px;
+  width: 400px;
+  outline: none;
+  border: none;
+  padding: 0 10px;
+  border-radius: 100px;
+  display: none;
+}
+.searchArea i{
+  font-size: 25px;
+  padding: 0 10px;
+  border-radius: 100px
+}
+
+#menuList{
+  height: 80%;
+  display: none;
+  position: absolute;
+  top:  160px;
+  right: 20px;
+  background-color: transparent;
+  z-index: 99;
+  white-space: nowrap;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+#menuList li{
+  list-style: none;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  width: 430px;
+  padding-left: 20px;
+  background-color: white;
+  }
+  #menuList li:hover{
+    background-color: lightblue;
+  }
+
+
+.Lfood{
+  position: absolute;
+  bottom: 150px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 15px;
+}
+.Pfood{
+  display: none;
+}
+
+@media (max-width: 800px){
+  .center{
+    width: 80%;
+    height: 550px;
+  }
+  #title{
+    font-size: 25px;
+  }
+  nav #logoDiv img{
+    width: 30px;
+  }
+  nav #logoDiv h3{
+    font-size: 15px;
+  }
+  nav .searchArea{
+    height: 30px;
+  }
+  nav .searchArea #searchInput{
+    height: 30px;
+    width: 150px;
+  }
+  #menuList{
+    height: 60%;
+    width: 190px;
+    right: 20px;
+  }
+  
+  .Lfood{
+    display: none;
+  }
+  .Pfood{
+  width: 240px;
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 15px;
+  display: block;
+  }
+}
